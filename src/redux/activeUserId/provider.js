@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import { setActiveUserId } from './actions'
 
 
 
@@ -13,7 +13,7 @@ const mapStateToProps = ({ activeUserId }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-
+  setActiveUserId: (id) => dispatch(setActiveUserId(id)),
 })
 
 
