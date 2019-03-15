@@ -33,10 +33,10 @@ const StyledUser = styled.div`
 }
 `;
 
-const User = ({ user }) => {
+const User = ({ user, onClick }) => {
   const { name, profile_pic, status } = user;
   return (
-    <StyledUser>
+    <StyledUser onClick={onClick}>
       <img src={profile_pic} alt={name} className="User__pic" />
       <div className="User__details">
         <p className="User__details-name">{name}</p>

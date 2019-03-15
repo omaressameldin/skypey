@@ -1,8 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
 import { device } from 'device';
+import { compose } from 'redux';
 import contactsProvider from 'redux/contacts/provider'
+import activeUserIdProvider from 'redux/activeUserId/provider'
 import User from "components/User";
+
+const providers = compose(
+  contactsProvider,
+  activeUserIdProvider,
+)
 
 const StyledSidebar = styled.aside`
   width: 80px;
@@ -15,14 +22,14 @@ const StyledSidebar = styled.aside`
     width: 320px;
   }
 `;
-const Sidebar = ({ contacts }) => {
+const Sidebar = ({ contacts, setActiveUserId }) => {
   return (
   <StyledSidebar>
     {
-      contacts.map(contact => <User user={contact} key={contact.user_id} />)
+      contacts.map(contact => <User onClick={() => setActiveUserId(contact.user_id)} user={contact} key={contact.user_id} />)
     }
   </StyledSidebar>
   );
 };
 
-export default contactsProvider(Sidebar);
+export default providers(Sidebar);
