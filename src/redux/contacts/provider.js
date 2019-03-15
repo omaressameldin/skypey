@@ -10,8 +10,8 @@ import { values } from 'lodash'
 // Maps
 //------------------------------------------------------------------------------
 
-const mapStateToProps = state => {
-  return {contacts: values(state.contacts)}
+const mapStateToProps = ({ contacts }) => {
+  return {contacts: values(contacts)}
 }
 
 const mapDispatchToProps = dispatch => ({
