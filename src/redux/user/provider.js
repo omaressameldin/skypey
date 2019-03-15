@@ -1,8 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { values } from 'lodash'
-// import { fetchAuth, updateProfileId } from './actions'
-
 
 
 
