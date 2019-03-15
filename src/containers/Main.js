@@ -8,7 +8,7 @@ import contactsProvider from 'redux/contacts/provider'
 
 import { device } from 'device';
 import Empty from 'components/Empty'
-import ChatWindow from 'components/ChatWindow'
+import ChatWindow from 'containers/ChatWindow'
 
 
 const providers = compose(
