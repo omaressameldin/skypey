@@ -6,6 +6,8 @@ import userProvider from 'redux/user/provider'
 
 import { device } from 'device';
 import Empty from 'components/Empty'
+import ChatWindow from 'components/ChatWindow'
+
 
 const providers = compose(
   activeUserIdProvider,
@@ -23,8 +25,7 @@ const Main = ({ user, activeUserId }) => {
     if (!activeUserId) {
       return <Empty user={user} />;
     } else {
-      // return <ChatWindow activeUserId={activeUserId} />;
-      return "Main Stuff";
+      return <ChatWindow activeUserId={activeUserId} />;
     }
   };
   return (
