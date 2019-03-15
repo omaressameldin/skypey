@@ -1,12 +1,15 @@
 import React from "react";
 import styled from 'styled-components';
+import Header from 'components/Header'
 
 const StyledChatWindow = styled.div`
 `;
 
-const ChatWindow = ({ activeUserId }) => {
+const ChatWindow = ({ activeUser }) => {
   return (
-    <StyledChatWindow>Conversation for user id: {activeUserId}</StyledChatWindow>
+    <StyledChatWindow>
+      <Header user={activeUser} />
+    </StyledChatWindow>
   );
 };
 
