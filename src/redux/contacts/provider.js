@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { values } from 'lodash'
 // import { fetchAuth, updateProfileId } from './actions'
 
 
@@ -11,7 +10,7 @@ import { values } from 'lodash'
 //------------------------------------------------------------------------------
 
 const mapStateToProps = ({ contacts }) => {
-  return {contacts: values(contacts)}
+  return { contacts }
 }
 
 const mapDispatchToProps = dispatch => ({

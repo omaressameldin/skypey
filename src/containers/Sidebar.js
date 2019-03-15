@@ -5,6 +5,8 @@ import { compose } from 'redux';
 import contactsProvider from 'redux/contacts/provider'
 import activeUserIdProvider from 'redux/activeUserId/provider'
 import User from "components/User";
+import { values } from 'lodash'
+
 
 const providers = compose(
   contactsProvider,
@@ -26,7 +28,7 @@ const Sidebar = ({ contacts, setActiveUserId }) => {
   return (
   <StyledSidebar>
     {
-      contacts.map(contact => <User onClick={() => setActiveUserId(contact.user_id)} user={contact} key={contact.user_id} />)
+      values(contacts).map(contact => <User onClick={() => setActiveUserId(contact.user_id)} user={contact} key={contact.user_id} />)
     }
   </StyledSidebar>
   );
