@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import avatar from './avatar.png'
+import avatar from 'images/avatar.png'
 
 const StyledEmpty = styled.div`
   display: flex;

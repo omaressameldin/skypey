@@ -1,6 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 import { device } from 'device';
+import avatar from 'images/avatar.png'
+
 
 const StyledUser = styled.div`
   display: flex;
@@ -40,7 +42,7 @@ const User = ({ user, onClick }) => {
   const { name, profile_pic, status } = user;
   return (
     <StyledUser onClick={onClick}>
-      <img src={profile_pic} alt={name} className="User__pic" />
+      <img src={profile_pic || avatar} alt={name} className="User__pic" />
       <div className="User__details">
         <p className="User__details-name">{name}</p>
         <p className="User__details-status">{status}</p>

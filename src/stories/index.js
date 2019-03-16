@@ -7,10 +7,8 @@ import Empty from 'components/Empty'
 import Chats from 'components/Chats'
 import Header from 'components/Header'
 import User from 'components/User'
-
-
-
 import avatar from'./avatar.png';
+
 
 const globalStyle= {
   backgroundColor: "rgba(32, 32, 35, 1)",
@@ -18,11 +16,11 @@ const globalStyle= {
 };
 
 storiesOf('Empty', module)
-.add('without picture', () => {
+.add('without avatar', () => {
   const user = {name: "Empty Test", status: 'I am happy Empty is working'}
   return <div style={globalStyle}><Empty user={user} /></div>
 })
-.add('with picture', () => {
+.add('with avatar', () => {
   const user = {name: "Empty Test", profile_pic: avatar, status: 'I am happy Empty is working'}
   return <div style={globalStyle}><Empty user={user} /></div>
 });
@@ -71,10 +69,18 @@ storiesOf('Header', module)
 });
 
 storiesOf('User', module)
-.add('default', () => {
+.add('with avatar', () => {
   const user = {
     name: "User Test",
     profile_pic: avatar,
+    status: 'I am happy User is working',
+    user_id: "testid",
+  }
+  return <div style={globalStyle}><User onClick={action('clicked')} user={user}/></div>
+})
+.add('without avatar', () => {
+  const user = {
+    name: "User Test",
     status: 'I am happy User is working',
     user_id: "testid",
   }
