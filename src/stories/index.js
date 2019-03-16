@@ -2,8 +2,6 @@ import React from 'react';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { Button } from '@storybook/react/demo';
 
 import Empty from 'components/Empty'
 import Chats from 'components/Chats'
@@ -18,16 +16,6 @@ const globalStyle= {
   backgroundColor: "rgba(32, 32, 35, 1)",
   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",sans-serif',
 };
-
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => (
-    <Button onClick={action('clicked')}>
-      <span role="img" aria-label="so cool">
-        😀 😎 👍 💯
-      </span>
-    </Button>
-  ));
 
 storiesOf('Empty', module)
 .add('without picture', () => {
