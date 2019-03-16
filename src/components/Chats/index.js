@@ -40,11 +40,27 @@ const StyledChats = styled.div`
   overflow-y: scroll;
 `;
 class Chats extends Component {
+  constructor(props) {
+    super(props);
+    this.messagesEnd = React.createRef();
+  }
+  componentDidMount() {
+    this.scrollToBottom();
+  }
+
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
+  scrollToBottom = () => {
+    this.messagesEnd.current.scrollTop = this.messagesEnd.current.scrollHeight;
+  }
+
   render() {
     const { messages } = this.props;
-    console.log(messages[0])
+
     return (
-      <StyledChats>
+      <StyledChats ref={this.messagesEnd}>
         {messages.map(message => (
           <Chat message={message} key={message.number} />
         ))}
