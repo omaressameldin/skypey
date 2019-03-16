@@ -6,7 +6,6 @@ import userProvider from 'redux/user/provider'
 import contactsProvider from 'redux/contacts/provider'
 
 
-import { device } from 'device';
 import Empty from 'components/Empty'
 import ChatWindow from 'containers/ChatWindow'
 

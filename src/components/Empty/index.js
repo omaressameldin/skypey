@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-import { device } from 'device';
+import avatar from './avatar.png'
 
 const StyledEmpty = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ const Empty = ({ user }) => {
   return (
     <StyledEmpty>
       <h1 className="Empty__name">Welcome, {firstName} </h1>
-      <img src={profile_pic} alt={name} className="Empty__img" />
+      <img src={profile_pic || avatar} alt={name} className="Empty__img" />
       <p className="Empty__status">
         <b>Status:</b> {status}
       </p>
