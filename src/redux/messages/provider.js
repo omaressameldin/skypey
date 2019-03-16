@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import { fetchAuth, updateProfileId } from './actions'
+import { sendMessage } from './actions'
 
 
 
@@ -14,7 +14,7 @@ const mapStateToProps = ({ messages }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-
+  sendMessage: (text, id) => dispatch(sendMessage(text, id)),
 })
 
 
