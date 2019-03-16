@@ -26,6 +26,8 @@ const StyledEmpty = styled.div`
 .Empty__img {
   border-radius: 50%;
   margin: 2rem 0;
+  width: 128px;
+  height: 128px;
 }
 
 .Empty__btn {

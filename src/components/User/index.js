@@ -30,6 +30,9 @@ const StyledUser = styled.div`
     color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
   }
+  .User__details-status {
+    color: rgba(189, 189, 192, 1);
+  }
 }
 `;
 
